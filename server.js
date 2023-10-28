@@ -1,17 +1,12 @@
 const express = require('express');
 const path = require('path');
+const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
 
 const PORT = process.env.PORT || 5001;
 
-const logger = (req, res, next) => {
-  console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
-
-  next();
-};
-
 const app = express();
-app.use(logger);
+app.use(clog);
 
 
 app.use(express.json());
