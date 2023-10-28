@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/notes', require('./routes/notesRoute.js'));
+app.use('/api/notes', require('./Develop/routes/notesRoute.js'));
 
 const PORT = process.env.PORT || 5001;
 
