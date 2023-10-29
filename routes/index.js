@@ -1,3 +1,4 @@
+// Importing modular router
 const router = require('express').Router();
 
 const noteRouter = require('./notesRoute');

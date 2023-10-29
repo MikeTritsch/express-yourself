@@ -1,3 +1,4 @@
+// Separated/dedicated notes route, establishing Router, using the UUID package, and helper functions
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
 const {
@@ -6,11 +7,12 @@ const {
   writeToFile,
 } = require('../helpers/fsUtils');
 
+// GET ALL NOTES //
 notes.get('/', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-
+// GETS SINGLE NOTE //
 notes.get('/:id', (req, res) => {
   const noteId = req.params.id;
   readFromFile('./db/db.json')
@@ -23,6 +25,7 @@ notes.get('/:id', (req, res) => {
     });
 });
 
+// DELETES NOTE //
 notes.delete('/:id', (req, res) => {
   const noteId = req.params.id;
   readFromFile('./db/db.json')
@@ -37,6 +40,7 @@ notes.delete('/:id', (req, res) => {
     });
 });
 
+// CREATE NOTE //
 notes.post('/', (req, res) => {
 
   const { title, text } = req.body;
@@ -50,4 +54,5 @@ notes.post('/', (req, res) => {
     res.json(`Note added successfully`);
 });
 
+// EXPORTS //
 module.exports = notes;
