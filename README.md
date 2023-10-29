@@ -10,7 +10,7 @@ The Express Note Taker App is a simple and efficient web application that allows
 
 ## Links
 
-[Deployed Application](https://drive.google.com/file/d/16r4q0YRuqTA6qjaxfLMO4kO3FsPE1Hli/view?usp=sharing)
+[Deployed Application](https://express-yourself-5d8b483a60a7.herokuapp.com/notes)
 
 [GitHub Repo](https://github.com/MikeTritsch/express-yourself)
 
