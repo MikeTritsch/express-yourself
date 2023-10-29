@@ -1,7 +1,7 @@
 [
     {
-        "title": "Hello World",
-        "text": "This is a test",
-        "id": "2532e5d9-12cd-4f05-af46-37af2aec7a40"
+        "title": "Instructions",
+        "text": "-Type your note here\n-Click \"Save Note\" in the upper right hand corner\n-Click on your note to the right to view it\n-Click the red trash can to delete your note",
+        "id": "74b3ad5b-e608-4f51-b34d-52c7eb85646d"
     }
 ]
